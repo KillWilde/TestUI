@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		250AE5A22019A55B005C04E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5A12019A55B005C04E7 /* AppDelegate.m */; };
+		250AE5AA2019A55B005C04E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250AE5A92019A55B005C04E7 /* Assets.xcassets */; };
+		250AE5AD2019A55B005C04E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250AE5AB2019A55B005C04E7 /* LaunchScreen.storyboard */; };
+		250AE5B02019A55B005C04E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5AF2019A55B005C04E7 /* main.m */; };
+		250AE5B82019A5BF005C04E7 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5B72019A5BF005C04E7 /* MainVC.m */; };
+		250AE5BD2019AC83005C04E7 /* CYCalenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5BC2019AC83005C04E7 /* CYCalenderVC.m */; };
+		250AE5C02019B130005C04E7 /* CYCalenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5BF2019B130005C04E7 /* CYCalenderView.m */; };
+		250AE5C5201AB66A005C04E7 /* CalenderNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5C4201AB66A005C04E7 /* CalenderNumberCell.m */; };
+		250AE5C9201AF96C005C04E7 /* CalenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5C8201AF96C005C04E7 /* CalenderManager.m */; };
+		256229A3202002B000D1941A /* CYRecorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 256229A2202002B000D1941A /* CYRecorderVC.m */; };
+		AE6F1C2B1C58AF6DE7AB8C71 /* libPods-UIOne.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDCD128A57633F08F789B7E /* libPods-UIOne.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0609D0AE904C962D2B0C46FB /* Pods-UIOne.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIOne.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIOne/Pods-UIOne.debug.xcconfig"; sourceTree = "<group>"; };
+		250AE59D2019A55B005C04E7 /* UIOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		250AE5A02019A55B005C04E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		250AE5A12019A55B005C04E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		250AE5A92019A55B005C04E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		250AE5AC2019A55B005C04E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		250AE5AE2019A55B005C04E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		250AE5AF2019A55B005C04E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		250AE5B62019A5BF005C04E7 /* MainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		250AE5B72019A5BF005C04E7 /* MainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		250AE5BB2019AC83005C04E7 /* CYCalenderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCalenderVC.h; sourceTree = "<group>"; };
+		250AE5BC2019AC83005C04E7 /* CYCalenderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYCalenderVC.m; sourceTree = "<group>"; };
+		250AE5BE2019B130005C04E7 /* CYCalenderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCalenderView.h; sourceTree = "<group>"; };
+		250AE5BF2019B130005C04E7 /* CYCalenderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYCalenderView.m; sourceTree = "<group>"; };
+		250AE5C3201AB66A005C04E7 /* CalenderNumberCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalenderNumberCell.h; sourceTree = "<group>"; };
+		250AE5C4201AB66A005C04E7 /* CalenderNumberCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalenderNumberCell.m; sourceTree = "<group>"; };
+		250AE5C6201AD327005C04E7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		250AE5C7201AF96C005C04E7 /* CalenderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalenderManager.h; sourceTree = "<group>"; };
+		250AE5C8201AF96C005C04E7 /* CalenderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalenderManager.m; sourceTree = "<group>"; };
+		256229A1202002B000D1941A /* CYRecorderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYRecorderVC.h; sourceTree = "<group>"; };
+		256229A2202002B000D1941A /* CYRecorderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYRecorderVC.m; sourceTree = "<group>"; };
+		271A85A066F5CF3A2A431DCE /* Pods-UIOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIOne/Pods-UIOne.release.xcconfig"; sourceTree = "<group>"; };
+		2EDCD128A57633F08F789B7E /* libPods-UIOne.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIOne.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		250AE59A2019A55B005C04E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE6F1C2B1C58AF6DE7AB8C71 /* libPods-UIOne.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		250AE5942019A55B005C04E7 = {
+			isa = PBXGroup;
+			children = (
+				250AE59F2019A55B005C04E7 /* UIOne */,
+				250AE59E2019A55B005C04E7 /* Products */,
+				2A4D0D51A25994D0054D1415 /* Pods */,
+				94E0F23384AD769F93C45637 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		250AE59E2019A55B005C04E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				250AE59D2019A55B005C04E7 /* UIOne.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		250AE59F2019A55B005C04E7 /* UIOne */ = {
+			isa = PBXGroup;
+			children = (
+				250AE5A02019A55B005C04E7 /* AppDelegate.h */,
+				250AE5A12019A55B005C04E7 /* AppDelegate.m */,
+				250AE5B62019A5BF005C04E7 /* MainVC.h */,
+				250AE5B72019A5BF005C04E7 /* MainVC.m */,
+				250AE5B92019AC4D005C04E7 /* VC */,
+				250AE5A92019A55B005C04E7 /* Assets.xcassets */,
+				250AE5AB2019A55B005C04E7 /* LaunchScreen.storyboard */,
+				250AE5AE2019A55B005C04E7 /* Info.plist */,
+				250AE5AF2019A55B005C04E7 /* main.m */,
+				250AE5C6201AD327005C04E7 /* PrefixHeader.pch */,
+			);
+			path = UIOne;
+			sourceTree = "<group>";
+		};
+		250AE5B92019AC4D005C04E7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				256229A0202001E700D1941A /* Recorder */,
+				250AE5BA2019AC4D005C04E7 /* Calender */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		250AE5BA2019AC4D005C04E7 /* Calender */ = {
+			isa = PBXGroup;
+			children = (
+				250AE5BB2019AC83005C04E7 /* CYCalenderVC.h */,
+				250AE5BC2019AC83005C04E7 /* CYCalenderVC.m */,
+				250AE5BE2019B130005C04E7 /* CYCalenderView.h */,
+				250AE5BF2019B130005C04E7 /* CYCalenderView.m */,
+				250AE5C3201AB66A005C04E7 /* CalenderNumberCell.h */,
+				250AE5C4201AB66A005C04E7 /* CalenderNumberCell.m */,
+				250AE5C7201AF96C005C04E7 /* CalenderManager.h */,
+				250AE5C8201AF96C005C04E7 /* CalenderManager.m */,
+			);
+			path = Calender;
+			sourceTree = "<group>";
+		};
+		256229A0202001E700D1941A /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				256229A1202002B000D1941A /* CYRecorderVC.h */,
+				256229A2202002B000D1941A /* CYRecorderVC.m */,
+			);
+			path = Recorder;
+			sourceTree = "<group>";
+		};
+		2A4D0D51A25994D0054D1415 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0609D0AE904C962D2B0C46FB /* Pods-UIOne.debug.xcconfig */,
+				271A85A066F5CF3A2A431DCE /* Pods-UIOne.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		94E0F23384AD769F93C45637 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EDCD128A57633F08F789B7E /* libPods-UIOne.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		250AE59C2019A55B005C04E7 /* UIOne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 250AE5B32019A55B005C04E7 /* Build configuration list for PBXNativeTarget "UIOne" */;
+			buildPhases = (
+				51C0859C7A558EFC6C5B2AE8 /* [CP] Check Pods Manifest.lock */,
+				250AE5992019A55B005C04E7 /* Sources */,
+				250AE59A2019A55B005C04E7 /* Frameworks */,
+				250AE59B2019A55B005C04E7 /* Resources */,
+				8B36F0133DE1D0FACCD6FD83 /* [CP] Embed Pods Frameworks */,
+				AE013F794059950EB83F504A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIOne;
+			productName = UIOne;
+			productReference = 250AE59D2019A55B005C04E7 /* UIOne.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		250AE5952019A55B005C04E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = SaturdayNight;
+				TargetAttributes = {
+					250AE59C2019A55B005C04E7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 250AE5982019A55B005C04E7 /* Build configuration list for PBXProject "UIOne" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 250AE5942019A55B005C04E7;
+			productRefGroup = 250AE59E2019A55B005C04E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				250AE59C2019A55B005C04E7 /* UIOne */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		250AE59B2019A55B005C04E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250AE5AD2019A55B005C04E7 /* LaunchScreen.storyboard in Resources */,
+				250AE5AA2019A55B005C04E7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51C0859C7A558EFC6C5B2AE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8B36F0133DE1D0FACCD6FD83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIOne/Pods-UIOne-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE013F794059950EB83F504A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIOne/Pods-UIOne-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		250AE5992019A55B005C04E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250AE5BD2019AC83005C04E7 /* CYCalenderVC.m in Sources */,
+				250AE5B82019A5BF005C04E7 /* MainVC.m in Sources */,
+				250AE5C9201AF96C005C04E7 /* CalenderManager.m in Sources */,
+				250AE5C02019B130005C04E7 /* CYCalenderView.m in Sources */,
+				256229A3202002B000D1941A /* CYRecorderVC.m in Sources */,
+				250AE5B02019A55B005C04E7 /* main.m in Sources */,
+				250AE5C5201AB66A005C04E7 /* CalenderNumberCell.m in Sources */,
+				250AE5A22019A55B005C04E7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		250AE5AB2019A55B005C04E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				250AE5AC2019A55B005C04E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		250AE5B12019A55B005C04E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		250AE5B22019A55B005C04E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		250AE5B42019A55B005C04E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0609D0AE904C962D2B0C46FB /* Pods-UIOne.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L48W3WHH6N;
+				GCC_PREFIX_HEADER = UIOne/PrefixHeader.pch;
+				INFOPLIST_FILE = UIOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SaturdayNight.BluetoothBasic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		250AE5B52019A55B005C04E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 271A85A066F5CF3A2A431DCE /* Pods-UIOne.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L48W3WHH6N;
+				GCC_PREFIX_HEADER = UIOne/PrefixHeader.pch;
+				INFOPLIST_FILE = UIOne/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SaturdayNight.BluetoothBasic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		250AE5982019A55B005C04E7 /* Build configuration list for PBXProject "UIOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250AE5B12019A55B005C04E7 /* Debug */,
+				250AE5B22019A55B005C04E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		250AE5B32019A55B005C04E7 /* Build configuration list for PBXNativeTarget "UIOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250AE5B42019A55B005C04E7 /* Debug */,
+				250AE5B52019A55B005C04E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 250AE5952019A55B005C04E7 /* Project object */;
+}
