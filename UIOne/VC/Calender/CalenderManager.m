@@ -41,8 +41,12 @@
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     format.dateFormat = @"yyyy-MM";
     
-    NSString *time = [NSString stringWithFormat:@"%li-%li",year,month];
+    NSString *time = [NSString stringWithFormat:@"%li-%@",year,month > 9 ? [NSString stringWithFormat:@"%li",month] : [NSString stringWithFormat:@"0%li",month]];
     NSDate *date = [format dateFromString:time];
+    
+    if (date == nil) {
+        return 0;
+    }
     
     NSRange range = [calendar rangeOfUnit:NSCalendarUnitDay
                                    inUnit: NSCalendarUnitMonth

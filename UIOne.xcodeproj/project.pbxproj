@@ -17,6 +17,11 @@
 		250AE5C5201AB66A005C04E7 /* CalenderNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5C4201AB66A005C04E7 /* CalenderNumberCell.m */; };
 		250AE5C9201AF96C005C04E7 /* CalenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 250AE5C8201AF96C005C04E7 /* CalenderManager.m */; };
 		256229A3202002B000D1941A /* CYRecorderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 256229A2202002B000D1941A /* CYRecorderVC.m */; };
+		6F5AEC5321990CF2007FDA4B /* MonthTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AEC5221990CF2007FDA4B /* MonthTitleCell.m */; };
+		6F5AEC5621991EB7007FDA4B /* MyDefineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AEC5521991EB7007FDA4B /* MyDefineLayout.m */; };
+		6F5AEC7621A3D897007FDA4B /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AEC7521A3D897007FDA4B /* CalendarDayCell.m */; };
+		6F980FF7219577D100084C64 /* CYCalendarHorizontalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F980FF6219577D100084C64 /* CYCalendarHorizontalVC.m */; };
+		6F980FFA219577F400084C64 /* CYCalendarHorizontalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F980FF9219577F400084C64 /* CYCalendarHorizontalView.m */; };
 		AE6F1C2B1C58AF6DE7AB8C71 /* libPods-UIOne.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EDCD128A57633F08F789B7E /* libPods-UIOne.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +49,16 @@
 		256229A2202002B000D1941A /* CYRecorderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYRecorderVC.m; sourceTree = "<group>"; };
 		271A85A066F5CF3A2A431DCE /* Pods-UIOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIOne.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIOne/Pods-UIOne.release.xcconfig"; sourceTree = "<group>"; };
 		2EDCD128A57633F08F789B7E /* libPods-UIOne.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIOne.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F5AEC5121990CF2007FDA4B /* MonthTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonthTitleCell.h; sourceTree = "<group>"; };
+		6F5AEC5221990CF2007FDA4B /* MonthTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonthTitleCell.m; sourceTree = "<group>"; };
+		6F5AEC5421991EB7007FDA4B /* MyDefineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDefineLayout.h; sourceTree = "<group>"; };
+		6F5AEC5521991EB7007FDA4B /* MyDefineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDefineLayout.m; sourceTree = "<group>"; };
+		6F5AEC7421A3D897007FDA4B /* CalendarDayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarDayCell.h; sourceTree = "<group>"; };
+		6F5AEC7521A3D897007FDA4B /* CalendarDayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
+		6F980FF5219577D100084C64 /* CYCalendarHorizontalVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCalendarHorizontalVC.h; sourceTree = "<group>"; };
+		6F980FF6219577D100084C64 /* CYCalendarHorizontalVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYCalendarHorizontalVC.m; sourceTree = "<group>"; };
+		6F980FF8219577F400084C64 /* CYCalendarHorizontalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYCalendarHorizontalView.h; sourceTree = "<group>"; };
+		6F980FF9219577F400084C64 /* CYCalendarHorizontalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYCalendarHorizontalView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +113,7 @@
 			children = (
 				256229A0202001E700D1941A /* Recorder */,
 				250AE5BA2019AC4D005C04E7 /* Calender */,
+				6F980FF12195777D00084C64 /* CalendarHorizontal */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -133,6 +149,23 @@
 				271A85A066F5CF3A2A431DCE /* Pods-UIOne.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F980FF12195777D00084C64 /* CalendarHorizontal */ = {
+			isa = PBXGroup;
+			children = (
+				6F980FF5219577D100084C64 /* CYCalendarHorizontalVC.h */,
+				6F980FF6219577D100084C64 /* CYCalendarHorizontalVC.m */,
+				6F5AEC5121990CF2007FDA4B /* MonthTitleCell.h */,
+				6F5AEC5221990CF2007FDA4B /* MonthTitleCell.m */,
+				6F5AEC5421991EB7007FDA4B /* MyDefineLayout.h */,
+				6F5AEC5521991EB7007FDA4B /* MyDefineLayout.m */,
+				6F980FF8219577F400084C64 /* CYCalendarHorizontalView.h */,
+				6F980FF9219577F400084C64 /* CYCalendarHorizontalView.m */,
+				6F5AEC7421A3D897007FDA4B /* CalendarDayCell.h */,
+				6F5AEC7521A3D897007FDA4B /* CalendarDayCell.m */,
+			);
+			path = CalendarHorizontal;
 			sourceTree = "<group>";
 		};
 		94E0F23384AD769F93C45637 /* Frameworks */ = {
@@ -264,13 +297,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F980FFA219577F400084C64 /* CYCalendarHorizontalView.m in Sources */,
 				250AE5BD2019AC83005C04E7 /* CYCalenderVC.m in Sources */,
+				6F980FF7219577D100084C64 /* CYCalendarHorizontalVC.m in Sources */,
 				250AE5B82019A5BF005C04E7 /* MainVC.m in Sources */,
 				250AE5C9201AF96C005C04E7 /* CalenderManager.m in Sources */,
 				250AE5C02019B130005C04E7 /* CYCalenderView.m in Sources */,
+				6F5AEC5321990CF2007FDA4B /* MonthTitleCell.m in Sources */,
 				256229A3202002B000D1941A /* CYRecorderVC.m in Sources */,
+				6F5AEC7621A3D897007FDA4B /* CalendarDayCell.m in Sources */,
 				250AE5B02019A55B005C04E7 /* main.m in Sources */,
 				250AE5C5201AB66A005C04E7 /* CalenderNumberCell.m in Sources */,
+				6F5AEC5621991EB7007FDA4B /* MyDefineLayout.m in Sources */,
 				250AE5A22019A55B005C04E7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger,CalendarSelectedStyle) {
+    CalendarSelectedStyle_Normal,
+    CalendarSelectedStyle_Orange,
+    CalendarSelectedStyle_Blue
+};
+
 @interface CalenderNumberCell : UICollectionViewCell
 
 @property (nonatomic,strong) UILabel *lbTitle;
 
--(void)makeSelected:(BOOL)ifSelected;
+-(void)makeSelectedStyle:(CalendarSelectedStyle)style;
 
 @end

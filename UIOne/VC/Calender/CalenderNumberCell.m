@@ -31,14 +31,19 @@
 }
 
 #pragma mark - Event
--(void)makeSelected:(BOOL)ifSelected
+-(void)makeSelectedStyle:(CalendarSelectedStyle)style
 {
-    if (ifSelected) {
-        self.selectedView.backgroundColor = CY_GET_UICOLOR(249, 61, 84, 1);
-    }
-    else
-    {
+    if (style == CalendarSelectedStyle_Normal) {
         self.selectedView.backgroundColor = [UIColor clearColor];
+        self.lbTitle.textColor = CY_GET_UICOLOR(120, 120, 120, 1);
+    }
+    else if (style == CalendarSelectedStyle_Blue)    {
+        self.selectedView.backgroundColor = CY_GET_UICOLOR(110, 165, 255, 1);
+        self.lbTitle.textColor = [UIColor whiteColor];
+    }
+    else{
+        self.selectedView.backgroundColor = CY_GET_UICOLOR(242, 117, 34, 1);
+        self.lbTitle.textColor = [UIColor whiteColor];
     }
 }
 

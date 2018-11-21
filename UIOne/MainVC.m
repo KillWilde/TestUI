@@ -10,6 +10,7 @@
 #import <Masonry.h>
 #import "CYCalenderVC.h"
 #import "CYRecorderVC.h"
+#import "CYCalendarHorizontalVC.h"
 
 @interface MainVC () <UITableViewDelegate,UITableViewDataSource>
 
@@ -45,6 +46,9 @@
     else if ([cmd isEqualToString:@"录音"])
     {
         [self.navigationController pushViewController:[[CYRecorderVC alloc] init] animated:YES];
+    }
+    else if ([cmd isEqualToString:@"日历水平滑动"]){
+        [self.navigationController pushViewController:[[CYCalendarHorizontalVC alloc] init] animated:YES];
     }
     
 }
@@ -98,6 +102,7 @@
         _arrayFunctions = [NSMutableArray arrayWithCapacity:0];
         [_arrayFunctions addObject:@"日历"];
         [_arrayFunctions addObject:@"录音"];
+        [_arrayFunctions addObject:@"日历水平滑动"];
     }
     
     return _arrayFunctions;

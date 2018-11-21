@@ -1,12 +1,12 @@
 //
-//  CYCalenderView.m
+//  CalendarDayCell.m
 //  UIOne
 //
-//  Created by SaturdayNight on 2018/1/25.
+//  Created by Tony Stark on 2018/11/20.
 //  Copyright © 2018年 SaturdayNight. All rights reserved.
 //
 
-#import "CYCalenderView.h"
+#import "CalendarDayCell.h"
 #import "CalenderNumberCell.h"
 #import <Masonry.h>
 #import "CalenderManager.h"
@@ -14,7 +14,7 @@
 static NSString *const kListWeekCell = @"CalenderNumberCell";
 static NSString *const kListMonthCell = @"Month";
 
-@interface CYCalenderView () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface CalendarDayCell () <UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic,strong) UILabel *lbData;   // 日期 年：月：日
 @property (nonatomic,strong) UICollectionView *listWeek;    // 星期列表
@@ -25,16 +25,11 @@ static NSString *const kListMonthCell = @"Month";
 
 @end
 
-@implementation CYCalenderView
+@implementation CalendarDayCell
 
--(CYCalenderView *)initWithFrame:(CGRect)rect
-{
-    self = [super initWithFrame:rect];
+- (instancetype)initWithFrame:(CGRect)frame{
+    self= [super initWithFrame:frame];
     if (self) {
-        // 设置需要显示的日历范围
-        self.sYear = 2017;
-        self.eYear = 2020;
-
         [self addSubview:self.listWeek];
         [self addSubview:self.listMonth];
         
@@ -44,13 +39,44 @@ static NSString *const kListMonthCell = @"Month";
     return self;
 }
 
+#pragma mark - 参数格式 YYYY-MM
+- (void)showDate:(NSString *)date{
+    [self updateDateSourceFrom:date];
+    [self.listMonth reloadData];
+}
+
+#pragma makr - UpdateShowDateSource
+- (void)updateDateSourceFrom:(NSString *)date{
+    NSArray *arrInfo = [date componentsSeparatedByString:@"-"];
+    if (arrInfo.count >= 2) {
+        int year = [[arrInfo objectAtIndex:0] intValue];
+        int month = [[arrInfo objectAtIndex:1] intValue];
+        
+        NSMutableDictionary *dicInfo = [NSMutableDictionary dictionaryWithCapacity:0];
+        
+        NSInteger num = [CalenderManager getWeekdayNumWithYear:year month:month day:1];
+        NSInteger totalDays = [CalenderManager getDaysWithYear:year month:month];
+        
+        NSString *title = [NSString stringWithFormat:@"%i年%i月",year,month];
+        
+        [dicInfo setObject:[NSNumber numberWithInteger:num] forKey:@"FirstWeekdayNum"];
+        [dicInfo setObject:[NSNumber numberWithInteger:totalDays] forKey:@"TotalDays"];
+        [dicInfo setObject:title forKey:@"Title"];
+        
+        [self.arrayListMonth replaceObjectAtIndex:0 withObject:dicInfo];
+    }
+}
+
 #pragma mark - Delegate
 #pragma mark UICollectionViewDelegate
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CalenderNumberCell *cell = (CalenderNumberCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    
-    [cell makeSelectedStyle:CalendarSelectedStyle_Orange];
+    if (collectionView.tag == 101) {
+        
+    }
+    else{
+        
+    }
 }
 
 #pragma mark UICollectionViewDataSource
@@ -61,7 +87,7 @@ static NSString *const kListMonthCell = @"Month";
     }
     else
     {
-        return self.arrayListMonth.count;
+        return 1;
     }
 }
 
@@ -82,9 +108,8 @@ static NSString *const kListMonthCell = @"Month";
         CalenderNumberCell *cell = (CalenderNumberCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kListWeekCell forIndexPath:indexPath];
         
         cell.lbTitle.text = [NSString stringWithFormat:@"%@",[self.arrayListWeek objectAtIndex:indexPath.row]];
-        cell.contentView.backgroundColor = CY_GET_UICOLOR(34, 182, 141, 1);
-        cell.lbTitle.textColor = [UIColor whiteColor];
-        
+        cell.contentView.backgroundColor = [UIColor whiteColor];
+        cell.lbTitle.textColor = [UIColor colorWithRed:120/255.0 green:120/255.0 blue:120/255.0 alpha:1];
         return cell;
     }
     else
@@ -94,9 +119,10 @@ static NSString *const kListMonthCell = @"Month";
         NSDictionary *dic = self.arrayListMonth[indexPath.section];
         
         [cell makeSelectedStyle:CalendarSelectedStyle_Normal];
-        
+        cell.hidden = NO;
         if (indexPath.row == 0) {
-            cell.lbTitle.text = [dic objectForKey:@"Title"];
+            cell.hidden = YES;
+            //cell.lbTitle.text = [dic objectForKey:@"Title"];
         }
         else
         {
@@ -104,7 +130,7 @@ static NSString *const kListMonthCell = @"Month";
             NSInteger totalDays = [[dic objectForKey:@"TotalDays"] integerValue];
             
             if (firstWeekdayNum > indexPath.row || (totalDays + firstWeekdayNum
-                 - 1) < indexPath.row ) {
+                                                    - 1) < indexPath.row ) {
                 cell.lbTitle.text = @"";
             }
             else
@@ -113,9 +139,9 @@ static NSString *const kListMonthCell = @"Month";
             }
             
             if (firstWeekdayNum == indexPath.row) {
-                [cell makeSelectedStyle:CalendarSelectedStyle_Blue];
+                [cell makeSelectedStyle:CalendarSelectedStyle_Orange];
             }
-            cell.lbTitle.textColor = [UIColor blackColor];
+
         }
         
         return cell;
@@ -131,8 +157,7 @@ static NSString *const kListMonthCell = @"Month";
     else
     {
         if (indexPath.row == 0) {
-            NSLog(@"indexRow 0 section %i",(int)indexPath.section);
-            return CGSizeMake(self.frame.size.width, 50);
+            return CGSizeMake(self.frame.size.width, 0);
         }
         else
         {
@@ -181,7 +206,7 @@ static NSString *const kListMonthCell = @"Month";
         
         _listWeek = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         _listWeek.tag = 101;
-        _listWeek.backgroundColor = CY_GET_UICOLOR(34, 182, 141, 1);
+        _listWeek.backgroundColor = [UIColor whiteColor];
         _listWeek.showsVerticalScrollIndicator = NO;
         [_listWeek registerClass:[CalenderNumberCell class] forCellWithReuseIdentifier:kListWeekCell];
         _listWeek.dataSource = self;
@@ -227,25 +252,23 @@ static NSString *const kListMonthCell = @"Month";
     if (!_arrayListMonth) {
         _arrayListMonth = [NSMutableArray arrayWithCapacity:0];
         
-        for (NSInteger year = self.sYear; year < (self.eYear + 1); year ++) {
-            for (NSInteger month = 1; month < 13; month ++) {
-                NSMutableDictionary *dicInfo = [NSMutableDictionary dictionaryWithCapacity:0];
-                
-                NSInteger num = [CalenderManager getWeekdayNumWithYear:year month:month day:1];
-                NSInteger totalDays = [CalenderManager getDaysWithYear:year month:month];
-                
-                NSString *title = [NSString stringWithFormat:@"%li年%li月",year,month];
-                
-                [dicInfo setObject:[NSNumber numberWithInteger:num] forKey:@"FirstWeekdayNum"];
-                [dicInfo setObject:[NSNumber numberWithInteger:totalDays] forKey:@"TotalDays"];
-                [dicInfo setObject:title forKey:@"Title"];
-                
-                [_arrayListMonth addObject:dicInfo];
-            }
-        }
+        NSMutableDictionary *dicInfo = [NSMutableDictionary dictionaryWithCapacity:0];
+        
+        NSInteger num = [CalenderManager getWeekdayNumWithYear:2018 month:1 day:1];
+        NSInteger totalDays = [CalenderManager getDaysWithYear:2018 month:1];
+        
+        NSString *title = [NSString stringWithFormat:@"%i年%i月",2018,1];
+        
+        [dicInfo setObject:[NSNumber numberWithInteger:num] forKey:@"FirstWeekdayNum"];
+        [dicInfo setObject:[NSNumber numberWithInteger:totalDays] forKey:@"TotalDays"];
+        [dicInfo setObject:title forKey:@"Title"];
+        
+        [_arrayListMonth addObject:dicInfo];
+        
     }
     
     return _arrayListMonth;
 }
 
 @end
+
