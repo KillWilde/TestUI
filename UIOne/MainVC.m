@@ -11,6 +11,7 @@
 #import "CYCalenderVC.h"
 #import "CYRecorderVC.h"
 #import "CYCalendarHorizontalVC.h"
+#import "ChoseListVC.h"
 
 @interface MainVC () <UITableViewDelegate,UITableViewDataSource>
 
@@ -49,6 +50,8 @@
     }
     else if ([cmd isEqualToString:@"日历水平滑动"]){
         [self.navigationController pushViewController:[[CYCalendarHorizontalVC alloc] init] animated:YES];
+    }else if (""){
+        [self.navigationController pushViewController:[[ChoseListVC alloc] init] animated:YES];
     }
     
 }
@@ -103,6 +106,7 @@
         [_arrayFunctions addObject:@"日历"];
         [_arrayFunctions addObject:@"录音"];
         [_arrayFunctions addObject:@"日历水平滑动"];
+        [_arrayFunctions addObject:@"竖直滑动选择列表"];
     }
     
     return _arrayFunctions;
